@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        select {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <label for="dynamicSelect">Signpost approach</label>
+    <select id="dynamicSelect">
+        <option selected disabled>Choose here</option>
+        <optgroup label="Drama">
+            <option>In this extract from the [text type], [author] employs [theme split] to convey [guiding question]</option>
+            <option value="1">NY</option>
+            <option>Option3</option>
+        </optgroup>
+    </select>
+
+    <script>
+        var selectElement = document.getElementById('dynamicSelect');
+        selectElement.addEventListener('change', function() {
+            this.style.width = ((this.value.length + 1) * 8) + 'px';
+        });
+    </script>
+</body>
+</html>
